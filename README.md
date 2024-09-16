@@ -16,7 +16,8 @@ Setup Instructions
 	*npm install cypress --save-dev
 	*Update baseUrl in cypress.env.json with the mock server URL.
 
- Running the Tests:
+
+Running the Tests:
 
 To Run Cypress Tests Without the GUI:
 Run npm run cypress:open:cli or npm run html-report.
