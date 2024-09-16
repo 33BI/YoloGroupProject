@@ -1,0 +1,29 @@
+[
+  {
+      "id": "9b157424-90c0-462e-ae57-86e895248ed1",
+      "name": "Tiina",
+      "firstLastName": "Bless",
+      "secondLastName": "Pure",
+      "CURP": "COEA791226MGRRVM07",
+      "RFC": "XYTB450923L72",
+      "account": "374283589513936"
+  },
+  {
+      "id": "502ed528-6e0e-483c-aae9-59b273ef6bb7",
+      "name": "Robin",
+      "firstLastName": "Oliver",
+      "secondLastName": "Rasmus",
+      "CURP": "IIVQ970211P28",
+      "RFC": "BVKW582904QZRWJY13",
+      "account": "8261935704526184"
+  },
+  {
+      "id": "93bd4df2-6bc6-4db2-a4e4-f53ab90c7615",
+      "name": "Kristofer",
+      "firstLastName": "Sebastian",
+      "secondLastName": "Karl",
+      "CURP": "DODI800731MCSLLD07",
+      "RFC": "DODI800731LH1",
+      "account": "9528176430254871"
+  }
+]

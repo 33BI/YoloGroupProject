@@ -1,0 +1,568 @@
+{
+	"info": {
+		"_postman_id": "1b1158ee-92b0-47b2-a55c-98fed5fcac10",
+		"name": "ExBanking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10028222"
+	},
+	"item": [
+		{
+			"name": "users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Tiina\",\n  \"firstLastName\": \"Bless\",\n  \"secondLastName\": \"Pure\",\n  \"CURP\": \"COEA791226MGRRVM07\",\n  \"RFC\": \"XYTB450923L72\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Tiina\",\n  \"firstLastName\": \"Bless\",\n  \"secondLastName\": \"Pure\",\n  \"CURP\": \"COEA791226MGRRVM07\",\n  \"RFC\": \"XYTB450923L72\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"id\": \"9b157424-90c0-462e-ae57-86e895248ed1\",\n  \"status\": \"Successful\",\n  \"name\": \"Tiina\",\n  \"firstLastName\": \"Bless\",\n  \"secondLastName\": \"Pure\",\n  \"CURP\": \"COEA791226MGRRVM07\",\n  \"RFC\": \"XYTB450923L72\",\n  \"account\": \"374283589513936\",\n  \"dateTime\": \"8/18/2024T18:35\"\n}"
+				}
+			]
+		},
+		{
+			"name": "users (existing user)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Tiina\",\n  \"firstLastName\": \"Bless\",\n  \"secondLastName\": \"Pure\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/users/existing",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"existing"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Tiina\",\n  \"firstLastName\": \"Bless\",\n  \"secondLastName\": \"Pure\",\n  \"CURP\": \"COEA791226MGRRVM07\",\n  \"RFC\": \"XYTB450923L72\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/existing",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"existing"
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"Unsuccessful\",\n  \"message\": \"The user you wanted to add already exists!\",\n  \"dateTime\": \"8/18/2024T18:35\"\n}"
+				}
+			]
+		},
+		{
+			"name": "users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[{\n  \"id\": \"9b157424-90c0-462e-ae57-86e895248ed1\",\n  \"name\": \"Tiina\",\n  \"firstLastName\": \"Bless\",\n  \"secondLastName\": \"Pure\",\n  \"CURP\": \"COEA791226MGRRVM07\",\n  \"RFC\": \"XYTB450923L72\",\n  \"account\": \"374283589513936\"\n}, {\n  \"id\": \"502ed528-6e0e-483c-aae9-59b273ef6bb7\",\n  \"name\": \"Robin\",\n  \"firstLastName\": \"Oliver\",\n  \"secondLastName\": \"Rasmus\",\n  \"CURP\": \"IIVQ970211P28\",\n  \"RFC\": \"BVKW582904QZRWJY13\",\n  \"account\": \"8261935704526184\"\n}, {\n  \"id\": \"93bd4df2-6bc6-4db2-a4e4-f53ab90c7615\",\n  \"name\": \"Kristofer\",\n  \"firstLastName\": \"Sebastian\",\n  \"secondLastName\": \"Karl\",\n  \"CURP\": \"DODI800731MCSLLD07\",\n  \"RFC\": \"DODI800731LH1\",\n  \"account\": \"9528176430254871\"\n}]"
+				}
+			]
+		},
+		{
+			"name": "users/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/users/{{CURP}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{CURP}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/{{CURP}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"{{CURP}}"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"9b157424-90c0-462e-ae57-86e895248ed1\",\n    \"name\": \"Tiina\",\n    \"firstLastName\": \"Bless\",\n    \"secondLastName\": \"Pure\",\n    \"CURP\": \"COEA791226MGRRVM07\",\n    \"RFC\": \"XYTB450923L72\",\n    \"account\": \"374283589513936\"\n}"
+				}
+			]
+		},
+		{
+			"name": "deposits",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"account\": \"9528176430254871\",\n  \"ammount\": 567.00\n}"
+				},
+				"url": {
+					"raw": "{{url}}/deposits",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"deposits"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"account\": \"9528176430254871\",\n  \"ammount\": 567.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/deposits",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deposits"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"Successful\",\n  \"account\": \"9528176430254871\",\n  \"ammount\": 567.00,\n  \"dateTime\": \"8/18/2024T18:35\"\n}"
+				}
+			]
+		},
+		{
+			"name": "withdrawals",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"account\": \"9528176430254871\",\n  \"ammount\": 30.45\n}"
+				},
+				"url": {
+					"raw": "{{url}}/withdrawals",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"withdrawals"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"account\": \"9528176430254871\",\n  \"ammount\": 30.45\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/withdrawals",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"withdrawals"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"Successful\",\n  \"account\": \"9528176430254871\",\n  \"withdraw\": 30.45,\n  \"newBalance\": 536.55,\n  \"dateTime\": \"8/18/2024T18:35\"\n}"
+				}
+			]
+		},
+		{
+			"name": "balance/:account",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/balance/{{account}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"balance",
+						"{{account}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/balance/{{account}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"balance",
+								"{{account}}"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"account\": \"9528176430254871\",\n  \"balance\": 536.55\n}"
+				}
+			]
+		},
+		{
+			"name": "transfers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"account\": \"9528176430254871\",\n  \"ammount\": 45.00,\n  \"destination\": \"8261935704526184\",\n  \"concept\": \"Transfer!\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/transfers",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"transfers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"account\": \"9528176430254871\",\n  \"ammount\": 45.00,\n  \"destination\": \"8261935704526184\",\n  \"concept\": \"Transfer!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/transfers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"transfers"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"Successful\",\n  \"account\": \"9528176430254871\",\n  \"ammount\": 45.00,\n  \"destination\": \"8261935704526184\",\n  \"concept\": \"Transfer!\",\n  \"newBalance\": 484.55,\n  \"dateTime\": \"8/18/2024T18:35\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://6ee61bbd-8221-42bb-985e-3e14dd441c6a.mock.pstmn.io"
+		}
+	]
+}
